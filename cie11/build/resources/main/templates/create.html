@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>CIE-11 Java</title>
+</head>
+<body>
+    <h1>Hola, Mundo!</h1>
+    <form>
+        <div class="mb-3">
+            <label for="defuncionFolio" class="form-label">Folio</label>
+            <input type="text" class="form-control" id="folio" placeholder="Folio del certificado">
+        </div>
+        <div class="mb-3">
+            <label for="defuncionNombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+        </div>
+        <div class="mb-3">
+            <label for="apPaterno" class="form-label">Primer apellido</label>
+            <input type="text" class="form-control" id="apPaterno" placeholder="Primer apellido">
+        </div>
+        <div class="mb-3">
+            <label for="apMaterno" class="form-label">Segundo apellido</label>
+            <input type="text" class="form-control" id="apMaterno" placeholder="Segundo apellido">
+        </div>
+        <div class="mb-3">
+            <label for="edad" class="form-label">Edad</label>
+            <input type="number" class="form-control" id="edad" placeholder="Edad">
+        </div>
+        <div class="mb-3">
+            <label for="claveEdad" class="form-label"></label>
+            <input type="text" class="form-control" id="claveEdad" placeholder="">
+        </div>
+        <div class="mb-3">
+            <label for="claveEdad" class="form-label">Edad</label>
+            <select id="claveEdad" class="form-select" aria-label="Default select example">
+                <option selected>Seleccione el tipo de edad</option>
+                <option value="SEGUNDOS">SEGUNDOS</option>
+                <option value="MINUTOS">MINUTOS</option>
+                <option value="HORAS">HORAS</option>
+                <option value="DÍAS">DÍAS</option>
+                <option value="MESES">MESES</option>
+                <option value="AÑOS">AÑOS</option>
+                <option value="SE IGNORA">SE IGNORA</option>
+                <option value="NO APLICA">NO APLICA</option>
+                <option value="NO ESPECIFICADO">NO ESPECIFICADO</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="fechaDefuncion" class="form-label">DD/MM/AAAA</label>
+            <input type="text" class="form-control" id="fechaDefuncion" placeholder="">
+        </div>
+        <div class="mb-3">
+            <label for="tipoDefuncion" class="form-label">Tipo de defunción</label>
+            <select id="tipoDefuncion" class="form-select" aria-label="Default select example">
+                <option selected>Seleccione el tipo de defunción</option>
+                <option value="ACCIDENTE">ACCIDENTE</option>
+                <option value="AGRESIÓN">AGRESIÓN (HOMICIDIO)</option>
+                <option value="LESIONES AUTOINFLINGIDAS INTENCIONALMENTE (SUICIDIO)">LESIONES AUTOINFLINGIDAS INTENCIONALMENTE (SUICIDIO)</option>
+                <option value="ENFERMEDAD">ENFERMEDAD</option>
+                <option value="INTERVENCIÓN LEGAL">INTERVENCIÓN LEGAL</option>
+                <option value="SE IGNORA">SE IGNORA</option>
+                <option value="NO APLICA">NO APLICA</option>
+                <option value="NO ESPECIFICADO">NO ESPECIFICADO</option>
+            </select>
+        </div>
+
+
+
+
+
+
+        <div class="mb-3">
+            <label for="causaA" class="form-label">a)</label>
+            <input type="text" class="form-control" id="causaA" placeholder="Causa">
+        </div>
+        <div class="mb-3">
+            <label for="tiempoA" class="form-label">Tiempo</label>
+            <input type="number" class="form-control" id="tiempoA" placeholder="Cantidad de tiempo">
+        </div>
+        <div class="mb-3">
+            <label for="claveTiempoA" class="form-label">Clave</label>
+            <select id="claveTiempoA" class="form-select" aria-label="Default select example">
+                <option selected>Seleccione el tipo de tiempo</option>
+                <option value="SEGUNDOS">SEGUNDOS</option>
+                <option value="MINUTOS">MINUTOS</option>
+                <option value="HORAS">HORAS</option>
+                <option value="DÍAS">DÍAS</option>
+                <option value="MESES">MESES</option>
+                <option value="AÑOS">AÑOS</option>
+                <option value="SE IGNORA">SE IGNORA</option>
+                <option value="NO APLICA">NO APLICA</option>
+                <option value="NO ESPECIFICADO">NO ESPECIFICADO</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="codigoCIE11A" class="form-label">Código CIE-11</label>
+            <input type="text" class="form-control" id="codigoCIE11A" placeholder="Clic para asignar código">
+        </div>
+        <div class="mb-3">
+            <label for="descripcionA" class="form-label">Descripción</label>
+            <input type="text" class="form-control" id="descripcionA" placeholder="Descripción">
+        </div>
+
+
+
+
+
+        <div class="mb-3">
+            <label for="causaB" class="form-label">b)</label>
+            <input type="text" class="form-control" id="causaB" placeholder="Causa">
+        </div>
+        <div class="mb-3">
+            <label for="tiempoB" class="form-label">Tiempo</label>
+            <input type="number" class="form-control" id="tiempoB" placeholder="Cantidad de tiempo">
+        </div>
+        <div class="mb-3">
+            <label for="claveTiempoB" class="form-label">Clave</label>
+            <select id="claveTiempoB" class="form-select" aria-label="Default select example">
+                <option selected>Seleccione el tipo de tiempo</option>
+                <option value="SEGUNDOS">SEGUNDOS</option>
+                <option value="MINUTOS">MINUTOS</option>
+                <option value="HORAS">HORAS</option>
+                <option value="DÍAS">DÍAS</option>
+                <option value="MESES">MESES</option>
+                <option value="AÑOS">AÑOS</option>
+                <option value="SE IGNORA">SE IGNORA</option>
+                <option value="NO APLICA">NO APLICA</option>
+                <option value="NO ESPECIFICADO">NO ESPECIFICADO</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="codigoCIE11B" class="form-label">Código CIE-11</label>
+            <input type="text" class="form-control" id="codigoCIE11B" placeholder="Clic para asignar código">
+        </div>
+        <div class="mb-3">
+            <label for="descripcionB" class="form-label">Descripción</label>
+            <input type="text" class="form-control" id="descripcionB" placeholder="Descripción">
+        </div>
+
+
+
+
+
+
+        <div class="mb-3">
+            <label for="causaC" class="form-label">C)</label>
+            <input type="text" class="form-control" id="causaC" placeholder="Causa">
+        </div>
+        <div class="mb-3">
+            <label for="tiempoC" class="form-label">Tiempo</label>
+            <input type="number" class="form-control" id="tiempoC" placeholder="Cantidad de tiempo">
+        </div>
+        <div class="mb-3">
+            <label for="claveTiempoC" class="form-label">Clave</label>
+            <select id="claveTiempoC" class="form-select" aria-label="Default select example">
+                <option selected>Seleccione el tipo de tiempo</option>
+                <option value="SEGUNDOS">SEGUNDOS</option>
+                <option value="MINUTOS">MINUTOS</option>
+                <option value="HORAS">HORAS</option>
+                <option value="DÍAS">DÍAS</option>
+                <option value="MESES">MESES</option>
+                <option value="AÑOS">AÑOS</option>
+                <option value="SE IGNORA">SE IGNORA</option>
+                <option value="NO APLICA">NO APLICA</option>
+                <option value="NO ESPECIFICADO">NO ESPECIFICADO</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="codigoCIE11C" class="form-label">Código CIE-11</label>
+            <input type="text" class="form-control" id="codigoCIE11C" placeholder="Clic para asignar código">
+        </div>
+        <div class="mb-3">
+            <label for="descripcionC" class="form-label">Descripción</label>
+            <input type="text" class="form-control" id="descripcionC" placeholder="Descripción">
+        </div>
+
+
+
+
+
+        <div class="mb-3">
+            <label for="causaD" class="form-label">d)</label>
+            <input type="text" class="form-control" id="causaD" placeholder="Causa">
+        </div>
+        <div class="mb-3">
+            <label for="tiempoD" class="form-label">Tiempo</label>
+            <input type="number" class="form-control" id="tiempoD" placeholder="Cantidad de tiempo">
+        </div>
+        <div class="mb-3">
+            <label for="claveTiempoD" class="form-label">Clave</label>
+            <select id="claveTiempoD" class="form-select" aria-label="Default select example">
+                <option selected>Seleccione el tipo de tiempo</option>
+                <option value="SEGUNDOS">SEGUNDOS</option>
+                <option value="MINUTOS">MINUTOS</option>
+                <option value="HORAS">HORAS</option>
+                <option value="DÍAS">DÍAS</option>
+                <option value="MESES">MESES</option>
+                <option value="AÑOS">AÑOS</option>
+                <option value="SE IGNORA">SE IGNORA</option>
+                <option value="NO APLICA">NO APLICA</option>
+                <option value="NO ESPECIFICADO">NO ESPECIFICADO</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="codigoCIE11D" class="form-label">Código CIE-11</label>
+            <input type="text" class="form-control" id="codigoCIE11D" placeholder="Clic para asignar código">
+        </div>
+        <div class="mb-3">
+            <label for="descripcionD" class="form-label">Descripción</label>
+            <input type="text" class="form-control" id="descripcionD" placeholder="Descripción">
+        </div>
+
+
+
+
+
+
+        <div class="mb-3">
+            <label for="causaParteDos" class="form-label">Parte II)</label>
+            <input type="text" class="form-control" id="causaParteDos" placeholder="Causa">
+        </div>
+        <div class="mb-3">
+            <label for="tiempoParteDos" class="form-label">Tiempo</label>
+            <input type="number" class="form-control" id="tiempoParteDos" placeholder="Cantidad de tiempo">
+        </div>
+        <div class="mb-3">
+            <label for="claveTiempoParteDos" class="form-label">Clave</label>
+            <select id="claveTiempoParteDos" class="form-select" aria-label="Default select example">
+                <option selected>Seleccione el tipo de tiempo</option>
+                <option value="SEGUNDOS">SEGUNDOS</option>
+                <option value="MINUTOS">MINUTOS</option>
+                <option value="HORAS">HORAS</option>
+                <option value="DÍAS">DÍAS</option>
+                <option value="MESES">MESES</option>
+                <option value="AÑOS">AÑOS</option>
+                <option value="SE IGNORA">SE IGNORA</option>
+                <option value="NO APLICA">NO APLICA</option>
+                <option value="NO ESPECIFICADO">NO ESPECIFICADO</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="codigoCIE11ParteDos" class="form-label">Código CIE-11</label>
+            <input type="text" class="form-control" id="codigoCIE11ParteDos" placeholder="Clic para asignar código">
+        </div>
+        <div class="mb-3">
+            <label for="descripcionParteDos" class="form-label">Descripción</label>
+            <input type="text" class="form-control" id="descripcionParteDos" placeholder="Descripción">
+        </div>
+        
+
+
+
+        <div class="mb-3">
+            <label for="codigoCIE11ParteDos" class="form-label">Código CIE-11</label>
+            <input type="text" class="form-control" id="codigoCIE11ParteDos" placeholder="Clic para asignar código">
+        </div>
+        <div class="mb-3">
+            <label for="descripcionParteDos" class="form-label">Descripción</label>
+            <input type="text" class="form-control" id="descripcionParteDos" placeholder="Descripción">
+        </div>
+
+
+
+        
+        <button type="submit" class="btn btn-primary">Guardar</button>
+
+
+
+
+
+
+
+        
+    </form>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
