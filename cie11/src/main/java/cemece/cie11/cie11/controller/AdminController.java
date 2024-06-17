@@ -49,14 +49,14 @@ public class AdminController {
 
 
     @GetMapping("editar/{id}")
-    public String edit(@PathVariable("id") int id, Model model) {
+    public String editar(@PathVariable("id") int id, Model model) {
 
         Optional<Defuncion> defuncion = repository.findById(id);
 
         if (defuncion.isPresent()) {
             model.addAttribute("defuncion", defuncion.get());
 
-            return "...";
+            return "/admin/editar.html";
         }
 
         return "redirect:/admin";
