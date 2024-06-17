@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     
-    <title>Defunciones - Editar registro</title>
+    <title>Defunciones - Nuevo registro</title>
 </head>
 <body>
     <div th:include="admin/template.html::header"></div>
@@ -21,13 +21,7 @@
         <div class="alert alert-success d-flex align-items-center" role="alert">
                 <div class="fw-bold">DATOS DEL FALLECIDO</div>
         </div>
-        <div class="col-3">
-            <label for="defdefuncionId" class="col-form-label">ID</label>
-            <input readonly type="text" class="form-control-plaintext text-bg-primary" id="defid" th:value="${def.id}" placeholder="Folio del certificado" required>
-            <div class="invalid-feedback">
-                El folio es obligatorio.
-            </div>
-        </div>
+
         <div class="col-3">
             <label for="defdefuncionFolio" class="col-form-label">Folio</label>
             <input type="text" class="form-control text-bg-primary" id="deffolio" th:field="*{folio}" placeholder="Folio del certificado" required>
@@ -39,7 +33,7 @@
         <div class="row g-3">
         <div class="col-3">
             <label for="defnombre" class="col-form-label">Nombre</label>
-            <input type="text" class="form-control" id="defnombre" th:field="*{nombre}" placeholder="Nombre" required>
+            <input type="text" class="form-control" id="defnombre" th:field="*{nombre}"  placeholder="Nombre" required>
             <div class="invalid-feedback">
                 El nombre es obligatorio.
             </div>
@@ -56,7 +50,7 @@
 
         <div class="col-3">
             <label for="defapMaterno" class="col-form-label">Segundo apellido</label>
-            <input type="text" class="form-control" id="defapMaterno" th:field="*{apMaterno}" placeholder="Segundo apellido" required>
+            <input type="text" class="form-control" id="defapMaterno" th:field="*{apMaterno}"  placeholder="Segundo apellido" required>
             <div class="invalid-feedback">
                 Si no conoce el apellido utilice NO ESPECIFICADO.
             </div>
@@ -64,7 +58,7 @@
 
         <div class="col-1">
             <label for="defedad" class="col-form-label">Edad</label>
-            <input type="number" class="form-control" id="defedad" th:field="*{edad}" placeholder="Edad" required>
+            <input type="number" class="form-control" id="defedad" th:field="*{edad}"  placeholder="Edad" required>
             <div class="invalid-feedback">
                 Especifique la edad.
             </div>
@@ -90,14 +84,14 @@
         </div>
         <div class="col-3">
             <label for="deffechaDefuncion" class="col-form-label">Fecha de defunción</label>
-            <input type="date" class="form-control" id="deffechaDefuncion" th:field="*{fechaDefuncion}"  placeholder="DD/MM/AAAA" required>
+            <input type="date" class="form-control" id="deffechaDefuncion" th:field="*{fechaDefuncion}" placeholder="DD/MM/AAAA" required>
             <div class="invalid-feedback">
                 La fecha de defunción es obligatoria.
             </div>
         </div>
         <div class="col-5">
             <label for="deftipoDefuncion" class="col-form-label">Tipo de defunción</label>
-            <select id="deftipoDefuncion" th:field="*{tipoDefuncion}"  class="form-select" aria-label="Default select example" required>
+            <select id="deftipoDefuncion" th:field="*{tipoDefuncion}" class="form-select" aria-label="Default select example" required>
                 <option selected disabled value="">Seleccione una opción</option>
                 <option value="ACCIDENTE">ACCIDENTE</option>
                 <option value="AGRESIÓN">AGRESIÓN (HOMICIDIO)</option>
@@ -131,14 +125,14 @@
         </div>
         <div class="col-2">
             <label for="deftiempoA" class="form-label">Tiempo</label>
-            <input type="number" class="form-control" id="deftiempoA" th:field="*{tiempoA}" placeholder="Cantidad de tiempo" required>
+            <input type="number" class="form-control" id="deftiempoA" th:field="*{tiempoA}"  placeholder="Cantidad de tiempo" required>
             <div class="invalid-feedback">
                 Especifique el tiempo que duró la enfermedad.
             </div>
         </div>
         <div class="col-3">
             <label for="defclaveTiempoA" class="form-label">Clave</label>
-            <select id="defclaveTiempoA"  th:field="*{claveTiempoA}" class="form-select" aria-label="Default select example" required>
+            <select id="defclaveTiempoA"  th:field="*{claveTiempoA}"  class="form-select" aria-label="Default select example" required>
                 <option selected disabled value="">Seleccione una opción</option>
                 <option value="SEGUNDOS">SEGUNDOS</option>
                 <option value="MINUTOS">MINUTOS</option>
@@ -156,11 +150,11 @@
         </div>
         <div class="col-3">
             <label for="defcodigoCIE11A" class="form-label">Código CIE-11</label>
-            <input type="text" class="form-control" id="defcodigoCIE11A" th:field="*{codigoCIE11A}" placeholder="Clic para asignar código">
+            <input type="text" class="form-control" id="defcodigoCIE11A" th:field="*{codigoCIE11A}"  placeholder="Clic para asignar código">
         </div>
         <div class="col-9">
             <label for="defdescripcionA" class="form-label">Descripción</label>
-            <input type="text" class="form-control" id="defdescripcionA" th:field="*{descripcionA}" placeholder="Descripción">
+            <input type="text" class="form-control" id="defdescripcionA" th:field="*{descripcionA}"  placeholder="Descripción">
         </div>
     </div>
 
@@ -173,11 +167,11 @@
         </div>
         <div class="col-2">
             <label for="deftiempoB" class="form-label">Tiempo</label>
-            <input type="number" class="form-control" id="deftiempoB" th:field="*{tiempoB}" placeholder="Cantidad de tiempo">
+            <input type="number" class="form-control" id="deftiempoB" th:field="*{tiempoB}"  placeholder="Cantidad de tiempo">
         </div>
         <div class="col-3">
             <label for="defclaveTiempoB" class="form-label">Clave</label>
-            <select id="defclaveTiempoB"  th:field="*{claveTiempoB}" class="form-select" aria-label="Default select example">
+            <select id="defclaveTiempoB"  th:field="*{claveTiempoB}"  class="form-select" aria-label="Default select example">
                 <option selected value="">Seleccione una opción</option>
                 <option value="SEGUNDOS">SEGUNDOS</option>
                 <option value="MINUTOS">MINUTOS</option>
@@ -192,11 +186,11 @@
         </div>
         <div class="col-3">
             <label for="defcodigoCIE11B" class="form-label">Código CIE-11</label>
-            <input type="text" class="form-control" id="defcodigoCIE11B"  th:field="*{codigoCIE11B}" placeholder="Clic para asignar código">
+            <input type="text" class="form-control" id="defcodigoCIE11B"  th:field="*{codigoCIE11B}"  placeholder="Clic para asignar código">
         </div>
         <div class="col-9">
             <label for="defdescripcionB" class="form-label">Descripción</label>
-            <input type="text" class="form-control" id="defdescripcionB" th:field="*{descripcionB}" placeholder="Descripción">
+            <input type="text" class="form-control" id="defdescripcionB" th:field="*{descripcionB}"  placeholder="Descripción">
         </div>
         </div>
 
@@ -206,7 +200,7 @@
         <div class="row g-3 align-items-start">
         <div class="col-7">
             <label for="defcausaC" class="form-label">c</label>
-            <input type="text" class="form-control" id="defcausaC" th:field="*{causaC}" placeholder="Causa">
+            <input type="text" class="form-control" id="defcausaC" th:field="*{causaC}"  placeholder="Causa">
         </div>
         <div class="col-2">
             <label for="deftiempoC" class="form-label">Tiempo</label>
@@ -214,7 +208,7 @@
         </div>
         <div class="col-3">
             <label for="defclaveTiempoC" class="form-label">Clave</label>
-            <select id="defclaveTiempoC" th:field="*{claveTiempoC}" class="form-select" aria-label="Default select example">
+            <select id="defclaveTiempoC" th:field="*{claveTiempoC}"  class="form-select" aria-label="Default select example">
                 <option selected value="">Seleccione una opción</option>
                 <option value="SEGUNDOS">SEGUNDOS</option>
                 <option value="MINUTOS">MINUTOS</option>
@@ -229,7 +223,7 @@
         </div>
         <div class="col-3">
             <label for="defcodigoCIE11C" class="form-label">Código CIE-11</label>
-            <input type="text" class="form-control" id="defcodigoCIE11C"  th:field="*{codigoCIE11C}" placeholder="Clic para asignar código">
+            <input type="text" class="form-control" id="defcodigoCIE11C"  th:field="*{codigoCIE11C}"  placeholder="Clic para asignar código">
         </div>
         <div class="col-9">
             <label for="defdescripcionC" class="form-label">Descripción</label>
@@ -243,7 +237,7 @@
         <div class="row g-3 align-items-start">
         <div class="col-7">
             <label for="defcausaD" class="form-label">d</label>
-            <input type="text" class="form-control" id="defcausaD" th:field="*{causaD}" placeholder="Causa">
+            <input type="text" class="form-control" id="defcausaD" th:field="*{causaD}"  placeholder="Causa">
         </div>
         <div class="col-2">
             <label for="deftiempoD" class="form-label">Tiempo</label>
@@ -251,7 +245,7 @@
         </div>
         <div class="col-3">
             <label for="defclaveTiempoD" class="form-label">Clave</label>
-            <select id="defclaveTiempoD" th:field="*{claveTiempoD}" class="form-select" aria-label="Default select example">
+            <select id="defclaveTiempoD" th:field="*{claveTiempoD}"  class="form-select" aria-label="Default select example">
                 <option selected value="">Seleccione una opción</option>
                 <option value="SEGUNDOS">SEGUNDOS</option>
                 <option value="MINUTOS">MINUTOS</option>
@@ -266,7 +260,7 @@
         </div>
         <div class="col-3">
             <label for="defcodigoCIE11D" class="form-label">Código CIE-11</label>
-            <input type="text" class="form-control" id="defcodigoCIE11D" th:field="*{codigoCIE11D}" placeholder="Clic para asignar código">
+            <input type="text" class="form-control" id="defcodigoCIE11D" th:field="*{codigoCIE11D}"  placeholder="Clic para asignar código">
         </div>
         <div class="col-9">
             <label for="defdescripcionD" class="form-label">Descripción</label>
@@ -280,11 +274,11 @@
     <div class="row g-3 align-items-start">
         <div class="col-7">
             <label for="defcausaParteDos" class="form-label">Causa(as)</label>
-            <input type="text" class="form-control" id="defcausaParteDos"  th:field="*{causaParteDos}" placeholder="Causa">
+            <input type="text" class="form-control" id="defcausaParteDos"  th:field="*{causaParteDos}"  placeholder="Causa">
         </div>
         <div class="col-2">
             <label for="deftiempoParteDos" class="form-label">Tiempo</label>
-            <input type="number" class="form-control" id="deftiempoParteDos"  th:field="*{tiempoParteDos}" placeholder="Cantidad de tiempo">
+            <input type="number" class="form-control" id="deftiempoParteDos"  th:field="*{tiempoParteDos}"  placeholder="Cantidad de tiempo">
         </div>
         <div class="col-3">
             <label for="defclaveTiempoParteDos" class="form-label">Clave</label>
@@ -303,11 +297,11 @@
         </div>
         <div class="col-3">
             <label for="defcodigoCIE11ParteDos" class="form-label">Código CIE-11</label>
-            <input type="text" class="form-control" id="defcodigoCIE11ParteDos" th:field="*{codigoCIE11ParteDos}" placeholder="Clic para asignar código">
+            <input type="text" class="form-control" id="defcodigoCIE11ParteDos" th:field="*{codigoCIE11ParteDos}"  placeholder="Clic para asignar código">
         </div>
         <div class="col-9">
             <label for="defdescripcionParteDos" class="form-label">Descripción</label>
-            <input type="text" class="form-control" id="defdescripcionParteDos" th:field="*{descripcionParteDos}" placeholder="Descripción">
+            <input type="text" class="form-control" id="defdescripcionParteDos" th:field="*{descripcionParteDos}"  placeholder="Descripción">
         </div>
     </div>
         
@@ -318,7 +312,7 @@
 
         <div class="col-3">
             <label for="defcieCBD" class="form-label">Código CIE-11</label>
-            <input type="text" class="form-control" id="defcieCBD" th:field="*{cie11CBD}" placeholder="Clic para asignar código">
+            <input type="text" class="form-control" id="defcieCBD" th:field="*{cie11CBD}"  placeholder="Clic para asignar código">
         </div>
         <div class="col-9">
             <label for="defdescripcionCBD" class="form-label">Descripción</label>

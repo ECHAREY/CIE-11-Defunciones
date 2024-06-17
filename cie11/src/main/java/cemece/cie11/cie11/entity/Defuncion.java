@@ -1,19 +1,17 @@
 package cemece.cie11.cie11.entity;
 
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-
-
 @Entity
 public class Defuncion {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private int id;
 
 
     //datos del fallecido

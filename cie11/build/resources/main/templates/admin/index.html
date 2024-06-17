@@ -54,7 +54,7 @@
 
               <td class="col-2 text-center">
                 <form th:action="@{/admin/eliminar/{id}(id = ${def.id})}" method="post">
-                  <a th:href="@{/admin/editar?id={id}(id = ${def.id})}" class="btn btn-sm btn-primary">Editar</a>
+                  <a th:href="@{/admin/editar/{id}(id = ${def.id})}" class="btn btn-sm btn-primary">Editar</a>
                   <button class="btn btn-sm btn-danger" type="submit">
                     Eliminar
                   </button>
