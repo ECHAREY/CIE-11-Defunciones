@@ -18,7 +18,7 @@
         <div class="row g-3">
 
 
-        <div class="alert alert-success d-flex align-items-center" role="alert">
+        <div class="alert alert-dark d-flex align-items-center" role="alert">
                 <div class="fw-bold">DATOS DEL FALLECIDO</div>
         </div>
 
@@ -67,7 +67,7 @@
         <div class="col-2">
             <label for="defclaveEdad" class="col-form-label">Clave de la edad</label>
             <select id="defclaveEdad" th:field="*{claveEdad}" class="form-select" aria-label="Default select example" required>
-                <option selected disabled value="">Seleccione una opción</option>
+                <option selected value="">Seleccione una opción</option>
                 <option value="SEGUNDOS">SEGUNDOS</option>
                 <option value="MINUTOS">MINUTOS</option>
                 <option value="HORAS">HORAS</option>
@@ -92,7 +92,7 @@
         <div class="col-5">
             <label for="deftipoDefuncion" class="col-form-label">Tipo de defunción</label>
             <select id="deftipoDefuncion" th:field="*{tipoDefuncion}" class="form-select" aria-label="Default select example" required>
-                <option selected disabled value="">Seleccione una opción</option>
+                <option selected value="">Seleccione una opción</option>
                 <option value="ACCIDENTE">ACCIDENTE</option>
                 <option value="AGRESIÓN">AGRESIÓN (HOMICIDIO)</option>
                 <option value="LESIONES AUTOINFLINGIDAS INTENCIONALMENTE (SUICIDIO)">LESIONES AUTOINFLINGIDAS INTENCIONALMENTE (SUICIDIO)</option>
@@ -108,16 +108,16 @@
     
 
 
-          <div class="alert alert-success d-flex align-items-center" role="alert">
+          <div class="alert alert-dark d-flex align-items-center" role="alert">
             <div class="fw-bold">CAUSAS DE DEFUNCIÓN</div>
           </div>
-          <span class="text-success"><h5>Parte I.</h5></span>
+          <span class="text-danger"><h5>Parte I.</h5></span>
         
 
 
         <div class="row g-3 align-items-start">
         <div class="col-7">
-            <label for="defcausaA" class="form-label">a</label>
+            <label for="defcausaA" class="form-label">a)</label>
             <input type="text" class="form-control" id="defcausaA"  th:field="*{causaA}"  placeholder="Causa" required>
             <div class="invalid-feedback">
                 Debe especificar al menos una causa.
@@ -133,7 +133,7 @@
         <div class="col-3">
             <label for="defclaveTiempoA" class="form-label">Clave</label>
             <select id="defclaveTiempoA"  th:field="*{claveTiempoA}"  class="form-select" aria-label="Default select example" required>
-                <option selected disabled value="">Seleccione una opción</option>
+                <option selected value="">Seleccione una opción</option>
                 <option value="SEGUNDOS">SEGUNDOS</option>
                 <option value="MINUTOS">MINUTOS</option>
                 <option value="HORAS">HORAS</option>
@@ -162,7 +162,7 @@
 
     <div class="row g-3 align-items-start">
         <div class="col-7">
-            <label for="defcausaB" class="form-label">b</label>
+            <label for="defcausaB" class="form-label">b)</label>
             <input type="text" class="form-control" id="defcausaB" th:field="*{causaB}"  placeholder="Causa">
         </div>
         <div class="col-2">
@@ -199,7 +199,7 @@
 
         <div class="row g-3 align-items-start">
         <div class="col-7">
-            <label for="defcausaC" class="form-label">c</label>
+            <label for="defcausaC" class="form-label">c)</label>
             <input type="text" class="form-control" id="defcausaC" th:field="*{causaC}"  placeholder="Causa">
         </div>
         <div class="col-2">
@@ -236,7 +236,7 @@
 
         <div class="row g-3 align-items-start">
         <div class="col-7">
-            <label for="defcausaD" class="form-label">d</label>
+            <label for="defcausaD" class="form-label">d)</label>
             <input type="text" class="form-control" id="defcausaD" th:field="*{causaD}"  placeholder="Causa">
         </div>
         <div class="col-2">
@@ -269,7 +269,7 @@
     </div>
 
 
-    <span class="text-success"><h5>Parte II.</h5></span>
+    <span class="text-danger"><h5>Parte II.</h5></span>
 
     <div class="row g-3 align-items-start">
         <div class="col-7">
@@ -306,7 +306,7 @@
     </div>
         
 
-    <div class="alert alert-success d-flex align-items-center" role="alert">
+    <div class="alert alert-dark d-flex align-items-center" role="alert">
         <div class="fw-bold">CAUSA BÁSICA DE LA DEFUNCIÓN</div>
       </div>
 
